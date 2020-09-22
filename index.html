@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
+    <title>Document</title>
+
+</head>
+<body>
+    <a-scene>
+        <a-ssets>
+            <a-asset-item id="gato" src= "./archive/cat.gltf"></a-asset-item>
+            <a-asset-item id="gato2" src= "./archive2/12221_Cat_v1_l3.gltf"></a-asset-item>
+
+         </a-ssets>
+        <a-entity environment ="preset: default; groundColor: #445; grid: cross"></a-entity>
+        <a-entity gltf-model="#gato" scale = "0.082 0.082 0.082" 
+        
+   
+        animation="property:position;
+        to:0 0 -2;
+        dur:200;
+        loop:true;
+        dir:alternate;
+        easing: easeInCirc"></a-entity>
+       <a-entity gltf-model="./archive2/12221_Cat_v1_l3.gltf" position=" 5 0 0" scale="0.061 0.0607 0.05872" rotation="-86.6633042603078 152.14034813006313 168.4169331741396" position=" 1 0 1 "
+       animation="property:position;
+    to:5 0 -2 ;
+    dur:200;
+    loop:true;
+    dir:alternate;
+    easing: easeInCirc" ></a-entity>
+       
+    </a-scene>
+</body>
+</html>
